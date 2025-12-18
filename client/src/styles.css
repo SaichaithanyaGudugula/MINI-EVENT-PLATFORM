@@ -1,0 +1,272 @@
+:root {
+  color-scheme: light;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --bg-color: #f5f7fb;
+  --text-color: #1f2937;
+  --navbar-bg: #111827;
+  --navbar-text: #fff;
+  --navbar-link: #e5e7eb;
+  --button-bg: #2563eb;
+  --button-hover: #1d4ed8;
+  --secondary-bg: #e5e7eb;
+  --secondary-text: #111827;
+  --card-bg: #fff;
+  --input-border: #d1d5db;
+  --muted-text: #6b7280;
+  --error-bg: #fee2e2;
+  --error-text: #dc2626;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-color: #1f2937;
+  --text-color: #f9fafb;
+  --navbar-bg: #374151;
+  --navbar-text: #fff;
+  --navbar-link: #d1d5db;
+  --button-bg: #3b82f6;
+  --button-hover: #2563eb;
+  --secondary-bg: #4b5563;
+  --secondary-text: #f9fafb;
+  --card-bg: #374151;
+  --input-border: #6b7280;
+  --muted-text: #9ca3af;
+  --error-bg: #451a1a;
+  --error-text: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+}
+
+.navbar a {
+  color: var(--navbar-link);
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.navbar a.active {
+  color: var(--navbar-text);
+  font-weight: 600;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--navbar-text) !important;
+}
+
+.user-chip {
+  background: #1f2937;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+button,
+.button {
+  background: var(--button-bg);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+button.secondary,
+.secondary {
+  background: var(--secondary-bg);
+  color: var(--secondary-text);
+}
+
+button.danger,
+.danger {
+  background: #dc2626;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.small,
+.small {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 540px;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--input-border);
+  border-radius: 0.35rem;
+  font-size: 1rem;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.auth-page {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.capacity {
+  font-size: 0.9rem;
+  background: #e5e7eb;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.owner-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.muted {
+  color: var(--muted-text);
+  margin: 0;
+}
+
+p {
+  margin: 0.1rem 0;
+}
+
+.error {
+  color: var(--error-text);
+  background: var(--error-bg);
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+}
+
+.loader {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.empty {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--muted-text);
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .nav-right {
+    flex-wrap: wrap;
+  }
+}
+
+
