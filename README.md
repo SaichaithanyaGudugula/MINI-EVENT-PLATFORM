@@ -30,7 +30,7 @@ This platform provides the following capabilities:
 - Responsive design for web and mobile  
 - API endpoints for frontend integration
 
-> *Add or update features here based on your implementation.*
+
 
 ---
 
@@ -48,7 +48,6 @@ The project uses the following technologies:
 - Database (e.g., MongoDB / PostgreSQL)
 - REST API
 
-> *Update tech stack based on your actual implementation.*
 
 ---
 
@@ -78,7 +77,6 @@ Make sure you have installed:
 - [Node.js](https://nodejs.org/)  
 - A package manager: `npm` or `yarn`
 
-> *If using a database like MongoDB, ensure the database server is running.*
 
 ---
 ### 📥 Installation
@@ -136,7 +134,6 @@ Once running:
 3. Create or browse events.
 4. View event details and participate.
 
-> *Add screenshots or demo GIFs to visually showcase your app (optional).*
 
 ---
 
